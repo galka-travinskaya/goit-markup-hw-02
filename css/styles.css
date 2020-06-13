@@ -21,8 +21,13 @@
     --footer-link-color: rgba(255, 255, 255, 0.6);
     --background-footer-color: #2F303A;
     --background-header-color: rgba(47, 48, 58, 0.8);
+    --background-button-color: #F5F4FA;
     --font-logo: 'Raleway', sans-serif;
     --font-text: 'Roboto', sans-serif
+}
+
+html {
+    box-sizing: border-box
 }
 
 body {
@@ -32,9 +37,28 @@ body {
     line-height: 1.7;
     font-family: var(--font-text);
     letter-spacing: 0.06em;
+    box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
 }
 
     /*header*/
+.page-header {
+    background-color: var(--primary-white-color) 
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    outline: 2px solid blueviolet;
+    background-color: pink
+}
+
 .logo {
     font-family: var(--font-logo);
     font-weight: 700;
@@ -51,6 +75,8 @@ body {
 }
 
 .logo-footer {
+    margin-top: 0px;
+    margin-bottom: 8px;
     color: var(--primary-white-color)
 }
 
@@ -77,7 +103,11 @@ body {
 
 .contact-link {
     font-style: normal;
-    color: var(--title-text-color)
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1,14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color)
 }
 
 .contact-link:hover,
@@ -88,10 +118,13 @@ body {
 /*main*/
 
 .hero {
-    background-color: var(--background-header-color)
+    background-color: var(--background-header-color);
+    text-align: center
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
     color: var(--primary-white-color);
     font-weight: 900;
     font-size: 44px;
@@ -102,11 +135,15 @@ body {
 
 .button {
     color: var(--title-text-color);
+    background: var(--background-button-color);
+    padding: 6px 22px;
+    min-width: 29px;
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
+    border-radius: 4px;
 }
 
 .button:hover,
@@ -123,8 +160,12 @@ body {
     line-height: 1.87;
     display: flex;
     align-items: center;
+    border-radius: 4px;
+    margin-bottom: 200px;
     text-align: center
 }
+
+
 
 a {
     text-decoration: none;
@@ -132,11 +173,24 @@ a {
 
 ul {
     list-style: none;
+    padding: 0px;
+    margin: 0px
 }
 
 
 /*main*/
+.section {
+    padding-top: 0px;
+    padding-bottom: 94px;
+}
+
+.section.no-padding {
+    padding-top: 0px:
+}
+
 .section-title {
+    margin-top: 0px;
+    margin-bottom: 50px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -145,6 +199,8 @@ ul {
 }
 
 .section-caption {
+    margin-top: 0px;
+    margin-bottom: 4px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -152,8 +208,18 @@ ul {
     letter-spacing: 0.06em
 }
 
+.section-comand {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--background-button-color)
+}
+
+
+
 /*сотрудники*/
 .headline {
+    margin-top: 0px;
+    margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -161,6 +227,8 @@ ul {
 }
 
 .subject {
+    margin-top: 0;
+    margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
@@ -169,7 +237,10 @@ ul {
     text-transform: uppercase
 }
 
+
 .item-title {
+    margin-top: 0px;
+    margin-bottom: 27px;
     color: var(--primary-white-color);
     font-weight: 700;
     font-size: 14px;
@@ -179,12 +250,16 @@ ul {
 }
 
 .text {
-font-weight: 400;
-font-size: 16px;
-line-height: 1.18
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18
 }
 
 .subtitle {
+    margin-top: 0px;
+    margin-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87
@@ -198,12 +273,15 @@ line-height: 1.18
 }
 
 
+
 /*footer*/
 .footer {
     background-color: var(--background-footer-color);
 }
 
 .aside {
+    margin-top: 0;
+    margin-bottom: 9px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
